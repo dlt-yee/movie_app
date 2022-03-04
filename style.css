@@ -38,7 +38,7 @@ p {
     background: transparent;
     z-index: 10;
     width: 500px;
-    height: 35px;
+    height: 40px;
     border: 2px solid #D1D5DB;
     border-radius: 10px;
     outline: none;
@@ -99,23 +99,36 @@ p {
     color: #fff;
     font-size: 1.5rem
 }
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider:hover {
+    cursor: pointer;
+}
 .preview-block {
-    width: 1200px;
+    width: 480px;
     height: 600px;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 .preview-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 25px;
-    width: 40%;
+    width: 100%;
     margin-left: 50px;
+    justify-self: flex-start;
 }
 .preview-movie p {
     color: #fff;
 }
 .preview-title {
+    width: 1200px;
     margin-top: 25px;
     font-size: 55px;
     font-weight: bold;
@@ -133,6 +146,7 @@ p {
     height: 25px;
 }
 .preview-description {
+    height: 250px;
     margin-top: 25px;
     font-size: 20px;
     font-style: normal;
@@ -141,6 +155,25 @@ p {
     height: 250px;
     overflow: hidden;
     padding: 5px;
+}
+.slider-dots {
+    position: relative;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+.slider-dots p {
+    color: #9CA3AF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 14px;
+}
+.dot1.active, .dot2.active, .dot3.active, .dot4.active, .dot5.active, .dot6.active {
+    color: #fff;
+    font-size: 25px;
 }
 .btn-prev-trailer {
     background: #BE123C;
@@ -151,7 +184,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 .btn-prev-trailer:hover {
     cursor: pointer;
@@ -178,6 +211,9 @@ p {
     width: 240px;
     position: relative;
     margin: 10px;
+}
+.movie:hover {
+    cursor: pointer;
 }
 .movie-info {
     margin-top: 25px;
