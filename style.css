@@ -1,0 +1,232 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+p {
+    font-family:  Roboto, Arial, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: auto;
+    height: fit-content;
+    position: relative;
+    width: 1200px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.logo-title {
+    font-size: 30px;
+    line-height: 5rem;
+    z-index: 10;
+    position: relative;
+    font-weight: bold;
+}
+.search-input {
+    position: relative;
+    background: transparent;
+    z-index: 10;
+    width: 500px;
+    height: 35px;
+    border: 2px solid #D1D5DB;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.search-input:focus {
+    border-color: #BE123C
+}
+.search-input::placeholder {
+    color: #fff;
+    padding-left: 5px;
+}
+.menu-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn-logo {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+.btn-logo:hover {
+    cursor: pointer;
+    color: #BE123C;
+}
+.btn-auth {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-right: 25px;
+}
+.btn-auth:hover {
+    cursor: pointer;
+}
+.btn-auth p{
+    color: #fff;
+    font-size: 1.5rem
+}
+.btn-menu {
+    background: #BE123C;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-menu:hover {
+    cursor: pointer;
+    background: #9c0d31;
+}
+.btn-menu p {
+    color: #fff;
+    font-size: 1.5rem
+}
+.preview-block {
+    width: 1200px;
+    height: 600px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.preview-movie {
+    margin-top: 25px;
+    width: 40%;
+    margin-left: 50px;
+}
+.preview-movie p {
+    color: #fff;
+}
+.preview-title {
+    margin-top: 25px;
+    font-size: 55px;
+    font-weight: bold;
+}
+.preview-rating {
+    margin-top: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rating-icon {
+    margin-right: 10px;
+    width: 45px;
+    height: 25px;
+}
+.preview-description {
+    margin-top: 25px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    height: 250px;
+    overflow: hidden;
+    padding: 5px;
+}
+.btn-prev-trailer {
+    background: #BE123C;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+.btn-prev-trailer:hover {
+    cursor: pointer;
+    background: #9c0d31;
+    zoom: 105%;
+}
+.btn-prev-trailer p {
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.movies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.movie {
+    width: 240px;
+    position: relative;
+    margin: 10px;
+}
+.movie-info {
+    margin-top: 25px;
+}
+.movie-poster {
+    height: 360px;
+}
+.movie-year {
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 13px;
+}
+.movie-title {
+    color: #111827;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 13px;
+}
+.movie-rating {
+    font-size: 16px;
+    color: #111827;
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.movie-rating-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 23px;
+}
+.movie-category {
+    font-weight: bold;
+    font-size: 16px;
+    color: #9CA3AF;
+    margin-top: 13px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:965px){
+    .preview-movie {
+        width: 80%;
+        position: relative;
+        margin-right: 20px;
+    }
+    .header-block {
+        width: 100%;
+    }
+}
