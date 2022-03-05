@@ -2,20 +2,29 @@ const TOKEN = '677dffb1-f4c3-4c6f-a2f3-602ff1e7daf9';
 const API_URL_TOP = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1';
 const API_URL_SEARCH = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=';
 
-let previewId = 3;
-
 getMovies(API_URL_TOP);
+
+const sliderDots = document.querySelector('.slider-dots');
+const slider = document.querySelector('.slider');
+let previewId = 3;
 getAwait(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${previewId}01`)
 
-const slider = document.querySelector('.slider');
 const previewBlock = document.querySelector('.preview-block');
-slider.addEventListener('click',() => {
+const dot = document.querySelector('.dot');
+
+sliderDots.addEventListener('click',() => {
     if (previewId < 9) {
         previewId++;
         previewBlock.innerHTML = '';
         getAwait(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${previewId}01`);
+        sliderDots.innerHTML = `
+            <p class="dot">Фильм №${previewId-2}</p>
+        `
     } else {
         previewId = 3;
+        sliderDots.innerHTML = `
+            <p class="dot">Фильм №${previewId-2}</p>
+        `
         previewBlock.innerHTML = '';
         getAwait(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${previewId}01`)
     }

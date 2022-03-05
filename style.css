@@ -68,18 +68,22 @@ p {
     cursor: pointer;
     color: #BE123C;
 }
+.menu-auth {
+    font-size: 1.5rem
+}
 .btn-auth {
     background: transparent;
     border: none;
     outline: none;
     margin-right: 25px;
+    color: #fff;
 }
 .btn-auth:hover {
     cursor: pointer;
+    color: #BE123C;
 }
 .btn-auth p{
-    color: #fff;
-    font-size: 1.5rem
+    
 }
 .btn-menu {
     background: #BE123C;
@@ -104,9 +108,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.slider:hover {
-    cursor: pointer;
+    flex-direction: row;
 }
 .preview-block {
     width: 480px;
@@ -157,12 +159,16 @@ p {
     padding: 5px;
 }
 .slider-dots {
-    position: relative;
-    margin-right: 50px;
+    padding-right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 200px;
+    height: 600px;
+}
+.slider-dots:hover {
+    cursor: pointer;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(190, 18, 61, 0.342) 47%);
 }
 .slider-dots p {
     color: #9CA3AF;
@@ -171,7 +177,7 @@ p {
     font-size: 18px;
     line-height: 14px;
 }
-.dot1.active, .dot2.active, .dot3.active, .dot4.active, .dot5.active, .dot6.active {
+.dot {
     color: #fff;
     font-size: 25px;
 }
@@ -189,7 +195,6 @@ p {
 .btn-prev-trailer:hover {
     cursor: pointer;
     background: #9c0d31;
-    zoom: 105%;
 }
 .btn-prev-trailer p {
     font-style: normal;
